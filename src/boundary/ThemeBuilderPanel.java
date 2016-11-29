@@ -13,7 +13,7 @@ import javax.swing.border.LineBorder;
 import java.awt.Color;
 import javax.swing.JToggleButton;
 
-public class ThemeBuilderGUI {
+public class ThemeBuilderPanel {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -29,7 +29,7 @@ public class ThemeBuilderGUI {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ThemeBuilderGUI window = new ThemeBuilderGUI();
+					ThemeBuilderPanel window = new ThemeBuilderPanel();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +41,7 @@ public class ThemeBuilderGUI {
 	/**
 	 * Create the application.
 	 */
-	public ThemeBuilderGUI() {
+	public ThemeBuilderPanel() {
 		initialize();
 	}
 
