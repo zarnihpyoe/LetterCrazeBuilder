@@ -1,19 +1,12 @@
 package boundary;
-import java.awt.EventQueue;
-import model.*;
-
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
-import javax.swing.border.LineBorder;
-
 import controller.ToMainMenuController;
 import model.Model;
 
-import java.awt.Color;
 import javax.swing.JToggleButton;
 import javax.swing.ImageIcon;
 
@@ -26,19 +19,21 @@ public class PuzzleBuilderPanel extends JPanel{
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	private JTextField textField_4;
 	private JToggleButton[] toggleButtonArray;
-	JLabel lblPuzzle;
-	JButton btnMainMenu;
-	JLabel lblLevel;
-	JButton btnPrev;
-	JButton btnSave;
+	private JLabel lblPuzzle;
+	private JButton btnMainMenu;
+	private JLabel lblLevel;
+	private JLabel lblMoves;
+	private JButton btnPrev;
+	private JButton btnSave;
 	
-	JLabel star_1;
-	JLabel star_2;
-	JLabel star_3;
-	JLabel star_4;
-	JLabel star_5;
-	JLabel star_6;
+	private JLabel star_1;
+	private JLabel star_2;
+	private JLabel star_3;
+	private JLabel star_4;
+	private JLabel star_5;
+	private JLabel star_6;
 	
 
 	/**
@@ -91,6 +86,11 @@ public class PuzzleBuilderPanel extends JPanel{
 		lblLevel.setBounds(500, 115, 70, 28);
 		add(lblLevel);
 		
+		lblMoves = new JLabel("Moves:");
+		lblMoves.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
+		lblMoves.setBounds(500, 150, 70, 28);
+		add(lblMoves);
+		
 		textField = new JTextField();
 		textField.setBounds(570, 118, 100, 25);
 		add(textField);
@@ -110,6 +110,11 @@ public class PuzzleBuilderPanel extends JPanel{
 		textField_3.setColumns(10);
 		textField_3.setBounds(657, 284, 46, 22);
 		add(textField_3);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(570, 150, 100, 25);
+		add(textField_4);
+		textField_4.setColumns(10);
 		
 		btnPrev = new JButton("Preview");
 		btnPrev.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
