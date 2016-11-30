@@ -10,6 +10,6 @@ public abstract class LevelBuilder {
 		this.sbb = sbb;
 	}
 	
-	public abstract Level build();
+	//public abstract Level build();
 
 }

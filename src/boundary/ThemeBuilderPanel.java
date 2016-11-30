@@ -92,6 +92,8 @@ public class ThemeBuilderPanel extends JPanel{
 	
 	public void initializeView(){
 		
+		this.setLayout(null);
+		
 		toggleButtonArray = new JToggleButton[36];
 		for (int i = 0; i < 36; i++){
 			toggleButtonArray[i] = new JToggleButton("");

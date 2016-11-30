@@ -26,9 +26,11 @@ public class ScoreBoardBuilder {
 		}
 	}
 	
+	/*
 	public ScoreBoard build() {
 		return new ScoreBoard(scoreForFirstStar, scoreForSecondStar, scoreForThirdStar);
 	}
+	*/
 	
 	
 }

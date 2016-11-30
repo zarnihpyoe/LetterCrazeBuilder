@@ -34,6 +34,7 @@ public class ChoosePuzzleModeController extends MouseAdapter {
 		
 		// We want to call some method on current application that will switch to just created 
 		// puzzle view
+		app.modifyFrameSize(100, 100, 750, 575);
 		app.switchPanel(puzzleView);
 		
 	}

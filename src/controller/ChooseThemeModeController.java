@@ -34,6 +34,7 @@ public class ChooseThemeModeController extends MouseAdapter {
 		
 		// We want to call some method on current application that will switch to just created 
 		// theme view
+		app.modifyFrameSize(100, 100, 750, 575);
 		app.switchPanel(themeView);
 		
 	}

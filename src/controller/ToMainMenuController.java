@@ -23,6 +23,8 @@ public class ToMainMenuController extends MouseAdapter {
 	public void mousePressed(MouseEvent me){
 		MainMenuPanel menuView = new MainMenuPanel(this.app, this.model);
 		model.resetBuilder();
+		
+		app.modifyFrameSize(100, 100, 600, 500);
 		app.switchPanel(menuView);
 	}
 	

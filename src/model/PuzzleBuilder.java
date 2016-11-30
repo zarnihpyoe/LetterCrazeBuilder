@@ -6,11 +6,5 @@ public class PuzzleBuilder extends LevelBuilder{
 		super(bb, sbb);
 	}
 
-	@Override
-	public Puzzle build() {
-		return null;
-		//Puzzle level = new Puzzle(bb.build(), sbb.build());
-		//return level;
-	}
 
 }

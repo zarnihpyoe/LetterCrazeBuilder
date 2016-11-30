@@ -65,6 +65,8 @@ public class PuzzleBuilderPanel extends JPanel{
 		*/
 	private void initializeView(){
 		
+		this.setLayout(null);
+		
 		toggleButtonArray = new JToggleButton[36];
 		for (int i = 0; i < 36; i++){
 			toggleButtonArray[i] = new JToggleButton("");
@@ -72,17 +74,17 @@ public class PuzzleBuilderPanel extends JPanel{
 			int y_pos = 62 + 70 * (i / 6);
 			toggleButtonArray[i].setBounds(x_pos, y_pos, 70, 70);
 			add(toggleButtonArray[i]);
-		}
+		}	
+		
+		btnMainMenu = new JButton("Main Menu");
+		btnMainMenu.setBounds(545, 13, 175, 52); //13
+		btnMainMenu.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
+		add(btnMainMenu);
 		
 		lblPuzzle = new JLabel("Puzzle");
 		lblPuzzle.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		lblPuzzle.setBounds(25, 13, 107, 36);
 		add(lblPuzzle);
-		
-		btnMainMenu = new JButton("Main Menu");
-		btnMainMenu.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
-		btnMainMenu.setBounds(545, 13, 175, 52);
-		add(btnMainMenu);
 		
 		lblLevel = new JLabel("Level:");
 		lblLevel.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));

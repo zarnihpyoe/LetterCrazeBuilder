@@ -22,26 +22,6 @@ import java.awt.Font;
 
 public class MainMenuPanel extends JPanel{
 	
-	//setcondentpane
-	//revalidate
-	
-	/*
-	 * 	/**
-	 * Launch the application.
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					LevelBuilderGUI window = new LevelBuilderGUI();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	*/
-	
 	private Application a;
 	private Model m;
 	
@@ -50,7 +30,6 @@ public class MainMenuPanel extends JPanel{
 	private JButton btnTheme;
 	private JButton btnDeleteLevel;
 	private JLabel lblMainMenu;
-
 
 
 	/**
@@ -84,26 +63,17 @@ public class MainMenuPanel extends JPanel{
 		lblMainMenu.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblMainMenu);
 		
-		
 		btnLightning = new JButton("Lightning");
 		btnLightning.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		btnLightning.setBounds(200, 210, 200, 50);
 		add(btnLightning);
 		
 		btnTheme = new JButton("Theme");
-		btnTheme.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
 		btnTheme.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		btnTheme.setBounds(200, 273, 200, 50);
 		add(btnTheme);
 		
 		btnDeleteLevel = new JButton("Delete Level");
-		btnDeleteLevel.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btnDeleteLevel.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		btnDeleteLevel.setBounds(371, 391, 200, 50);
 		add(btnDeleteLevel);
