@@ -2,7 +2,11 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+<<<<<<< HEAD
 import java.awt.event.MouseEvent;
+=======
+import java.awt.event.MouseAdapter;
+>>>>>>> master
 
 import boundary.Application;
 import boundary.MainMenuPanel;

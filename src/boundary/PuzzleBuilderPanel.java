@@ -1,5 +1,6 @@
 package boundary;
 import java.awt.EventQueue;
+import model.*;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;

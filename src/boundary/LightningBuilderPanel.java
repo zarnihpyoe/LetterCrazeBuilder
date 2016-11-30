@@ -43,7 +43,7 @@ public class LightningBuilderPanel extends JPanel{
 	/**
 	 * Create the application.
 	 */
-	public LightningBuilderPanel(Model m, Application a) {
+	public LightningBuilderPanel(Application a, Model m) {
 		this.m = m;
 		this.a = a;
 		initialize();
