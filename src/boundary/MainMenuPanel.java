@@ -108,6 +108,6 @@ public class MainMenuPanel extends JPanel{
 	}
 	
 	private void initializeControllers(){
-		btnTheme.addMouseListener(new ThemeMenuButtonController(this, a, m));
+		btnTheme.addMouseListener();
 	}
 }

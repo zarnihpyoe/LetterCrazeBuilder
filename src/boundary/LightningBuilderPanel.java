@@ -14,13 +14,10 @@ import java.awt.Color;
 import javax.swing.JToggleButton;
 import javax.swing.ImageIcon;
 
-import model.*;
-
 public class LightningBuilderPanel extends JPanel{
 	
 	Application a;
 	Model m;
-
 
 	private JTextField textField;
 	private JTextField textField_1;
@@ -41,8 +38,7 @@ public class LightningBuilderPanel extends JPanel{
 	JLabel star_3;
 	JLabel star_4;
 	JLabel star_5;
-	JLabel star_6;
-	
+	JLabel star_6;	
 
 	/**
 	 * Create the application.

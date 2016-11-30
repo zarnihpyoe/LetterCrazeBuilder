@@ -38,7 +38,6 @@ public class PuzzleBuilderPanel extends JPanel{
 	JLabel star_5;
 	JLabel star_6;
 	
-	
 
 	/**
 	 * Create the application.
