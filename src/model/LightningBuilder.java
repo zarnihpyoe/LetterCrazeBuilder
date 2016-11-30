@@ -10,8 +10,9 @@ public class LightningBuilder extends LevelBuilder {
 	
 	@Override
 	public Lightning build() {
-		Lightning level = new Lightning(bb.build(), sbb.build(), time);
-		return level;
+		return null;
+		//Lightning level = new Lightning(bb.build(), sbb.build(), time);
+		//return level;
 	}
 	
 	public LightningBuilder setTime(int time) {

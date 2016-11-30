@@ -34,7 +34,7 @@ public class ChooseLightningModeController extends MouseAdapter {
 		this.model.assignBuilder(lightningBuilder);
 		
 		// Initiate new lightning view
-		LightningBuilderPanel lightningView = new LightningBuilderPanel(this.app, this.model);
+		LightningBuilderPanel lightningView = new LightningBuilderPanel(this.model, this.app);
 		
 		// We want to call some method on current application that will switch to just created 
 		// lightning view

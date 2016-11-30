@@ -1,10 +1,9 @@
 package model;
 
 public class BoardBuilder {
-	Tile [][] tiles;
 	Tile [] enabledTiles;
 	
-	BoardBuilder(){
+	public BoardBuilder(){
 		this.enabledTiles = new Tile[0];
 	}
 	

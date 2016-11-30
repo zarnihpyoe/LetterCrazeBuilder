@@ -8,8 +8,9 @@ public class PuzzleBuilder extends LevelBuilder{
 
 	@Override
 	public Puzzle build() {
-		Puzzle level = new Puzzle(bb.build(), sbb.build());
-		return level;
+		return null;
+		//Puzzle level = new Puzzle(bb.build(), sbb.build());
+		//return level;
 	}
 
 }
