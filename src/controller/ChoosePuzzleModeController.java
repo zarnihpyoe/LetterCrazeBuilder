@@ -20,8 +20,6 @@ public class ChoosePuzzleModeController extends MouseAdapter {
 	
 	@Override
 	public void mousePressed(MouseEvent me) {
-		// Initiate new main menu panel 
-		MainMenuPanel mainMenu = new MainMenuPanel(this.app, this.model);
 		
 		// Initiate new score board builder and board builder
 		ScoreBoardBuilder scoreBoard = new ScoreBoardBuilder();
@@ -29,14 +27,14 @@ public class ChoosePuzzleModeController extends MouseAdapter {
 		
 		// Initiate new Lightning builder and lightning view
 		PuzzleBuilder puzzleBuilder = new PuzzleBuilder(board, scoreBoard);
-		PuzzleBuilderPanel puzzleView = new PuzzleBuilderPanel(this.model, this.app);
+		PuzzleBuilderPanel puzzleView = new PuzzleBuilderPanel(this.app, this.model);
 		
 		// Assign lightning builder status to model
 		this.model.assignBuilder(puzzleBuilder);
 		
 		// We want to call some method on current application that will switch to just created 
-		// lightning view
-		
+		// puzzle view
+		app.switchPanel(puzzleView);
 		
 	}
 }

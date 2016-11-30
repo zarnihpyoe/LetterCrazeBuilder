@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 
 import model.Model;
 import javax.swing.JToggleButton;
+import model.*;
 
 public class ThemeBuilderPanel extends JPanel{
 	

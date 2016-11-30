@@ -20,8 +20,6 @@ public class ChooseThemeModeController extends MouseAdapter {
 	
 	@Override
 	public void mousePressed(MouseEvent me) {
-		// Initiate new main menu panel 
-		MainMenuPanel mainMenu = new MainMenuPanel(this.app, this.model);
 		
 		// Initiate new score board builder and board builder
 		ScoreBoardBuilder scoreBoard = new ScoreBoardBuilder();
@@ -29,14 +27,14 @@ public class ChooseThemeModeController extends MouseAdapter {
 		
 		// Initiate new Lightning builder and lightning view
 		ThemeBuilder themeBuilder = new ThemeBuilder(board, scoreBoard);
-		ThemeBuilderPanel themeView = new ThemeBuilderPanel(this.model, this.app);
+		ThemeBuilderPanel themeView = new ThemeBuilderPanel(this.app, this.model);
 		
 		// Assign lightning builder status to model
 		this.model.assignBuilder(themeBuilder);
 		
 		// We want to call some method on current application that will switch to just created 
-		// lightning view
-		
+		// theme view
+		app.switchPanel(themeView);
 		
 	}
 }
