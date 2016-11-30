@@ -14,6 +14,8 @@ import java.awt.Color;
 import javax.swing.JToggleButton;
 import javax.swing.ImageIcon;
 
+import model.*;
+
 public class LightningBuilderPanel extends JPanel{
 	
 	Application a;
