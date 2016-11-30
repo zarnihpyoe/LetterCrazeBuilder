@@ -10,6 +10,7 @@ import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
+import controller.ToMainMenuController;
 import model.Model;
 
 import java.awt.Color;
@@ -150,5 +151,6 @@ public class PuzzleBuilderPanel extends JPanel{
 	}
 	
 	private void initializeControllers(){
+		btnMainMenu.addMouseListener(new ToMainMenuController(this.a, this.m));
 	}
 }

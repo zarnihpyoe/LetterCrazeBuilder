@@ -14,7 +14,7 @@ public class Model {
 	}
 	
 	// To reset model to null 
-	void resetBuilder() {
+	public void resetBuilder() {
 		this.currentBuilder = null;
 	}
 	

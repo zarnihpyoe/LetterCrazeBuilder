@@ -9,6 +9,8 @@ import javax.swing.JPanel;
 
 import model.Model;
 import javax.swing.JToggleButton;
+
+import controller.ToMainMenuController;
 import model.*;
 
 public class ThemeBuilderPanel extends JPanel{
@@ -307,6 +309,6 @@ public class ThemeBuilderPanel extends JPanel{
 	}
 	
 	public void initializeControllers(){
-		
+		btnMainMenu.addMouseListener(new ToMainMenuController(this.a, this.m));
 	}
 }

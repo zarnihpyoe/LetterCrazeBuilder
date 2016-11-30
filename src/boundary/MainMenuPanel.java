@@ -9,7 +9,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 
-import controllers.ThemeMenuButtonController;
+import controller.ChooseLightningModeController;
+import controller.ChoosePuzzleModeController;
+import controller.ChooseThemeModeController;
 import model.Model;
 
 import java.awt.GridBagLayout;
@@ -108,6 +110,8 @@ public class MainMenuPanel extends JPanel{
 	}
 	
 	private void initializeControllers(){
-		btnTheme.addMouseListener();
+		btnPuzzle.addMouseListener(new ChoosePuzzleModeController(this.a, this.m));
+		btnLightning.addMouseListener(new ChooseLightningModeController(this.a, this.m));
+		btnTheme.addMouseListener(new ChooseThemeModeController(this.a, this.m));
 	}
 }

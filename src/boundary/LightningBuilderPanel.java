@@ -10,6 +10,10 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
+
+import controller.ToMainMenuController;
+import model.Model;
+
 import java.awt.Color;
 import javax.swing.JToggleButton;
 import javax.swing.ImageIcon;
@@ -43,7 +47,7 @@ public class LightningBuilderPanel extends JPanel{
 	/**
 	 * Create the application.
 	 */
-	public LightningBuilderPanel(Application a, Model m) {
+	public LightningBuilderPanel(Model m, Application a) {
 		this.m = m;
 		this.a = a;
 		initialize();
@@ -155,6 +159,7 @@ public class LightningBuilderPanel extends JPanel{
 	}
 	
 	private void initializeControllers(){
+		btnMainMenu.addMouseListener(new ToMainMenuController(this.a, this.m));
 	}
 	/*
 		frame = new JFrame();
