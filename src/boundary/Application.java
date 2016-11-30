@@ -1,11 +1,14 @@
 package boundary;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.Timer;
+
 import model.Model;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Application {
 	JFrame frame;
@@ -39,42 +42,27 @@ public class Application {
 		return (JPanel) this.frame.getContentPane();
 	}
 	
+	public void displayMainMenu(){
+    	MainMenuPanel menuView = new MainMenuPanel(this, m);
+		switchPanel(menuView);
+		modifyFrameSize(100, 100, 600, 500);
+		frame.setVisible(true);
+	}
+	
 	
 	public static void main (String []args) {		
 		
 		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				Model m = new Model();
-				Timer timer = new Timer();
+			public void run() {		
+				Model m = new Model();	
+				Application window = new Application(m);
+				BuilderSplashPanel splashView = new BuilderSplashPanel(window);
+				window.frame.setLocationRelativeTo(null);
+				window.switchPanel(splashView);
+				window.modifyFrameSize(100, 100, 718, 445);
 				
-				try {
-					final Application window = new Application(m);
-					BuilderSplashPanel splashView = new BuilderSplashPanel();
-					window.switchPanel(splashView);
-					window.modifyFrameSize(100, 100, 718, 445);
-					
-					
-					timer.schedule(new TimerTask() {
-						  @Override
-						  public void run() {
-							  window.frame.setVisible(true);
-						  }
-						}, 3000);
-					window.frame.setVisible(false);
-					
-					MainMenuPanel menuView = new MainMenuPanel(window, m);
-					window.switchPanel(menuView);
-					window.modifyFrameSize(100, 100, 600, 500);
-					window.frame.setVisible(true);
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
 			}
 		});
 	}
 	
-	
-	
-
 }
