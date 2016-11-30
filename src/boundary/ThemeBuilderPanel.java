@@ -27,8 +27,9 @@ public class ThemeBuilderPanel extends JPanel{
 	JLabel lblListOfWords;
 	JButton but_Prev;
 	JButton but_Save;
-	//JToggleButton[] toggleButtonArray;
+	JToggleButton[] toggleButtonArray;
 	
+	/*
 	JToggleButton toggleButton;
 	JToggleButton toggleButton_1;
 	JToggleButton toggleButton_2;
@@ -65,7 +66,7 @@ public class ThemeBuilderPanel extends JPanel{
 	JToggleButton toggleButton_33;
 	JToggleButton toggleButton_34;
 	JToggleButton toggleButton_35;
-	
+	*/
 	
 
 
@@ -87,6 +88,16 @@ public class ThemeBuilderPanel extends JPanel{
 	}
 	
 	public void initializeView(){
+		
+		toggleButtonArray = new JToggleButton[36];
+		for (int i = 0; i < 36; i++){
+			toggleButtonArray[i] = new JToggleButton("");
+			int x_pos = 20 + 70 * (i % 6);
+			int y_pos = 62 + 70 * (i / 6);
+			toggleButtonArray[i].setBounds(x_pos, y_pos, 70, 70);
+			add(toggleButtonArray[i]);
+		}
+		
 		lblPuzzle = new JLabel("Theme");
 		lblPuzzle.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		lblPuzzle.setBounds(25, 13, 107, 36);
@@ -137,6 +148,7 @@ public class ThemeBuilderPanel extends JPanel{
 		lblListOfWords.setBounds(520, 214, 150, 28);
 		add(lblListOfWords);
 		
+		/*
 		toggleButton = new JToggleButton("");
 		toggleButton.setBounds(25, 62, 70, 70);
 		add(toggleButton);
@@ -280,13 +292,14 @@ public class ThemeBuilderPanel extends JPanel{
 		 toggleButton_35 = new JToggleButton("");
 		toggleButton_35.setBounds(375, 408, 70, 70);
 		add(toggleButton_35);
+		*/
 		
-		 but_Prev = new JButton("Preview");
+		but_Prev = new JButton("Preview");
 		but_Prev.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		but_Prev.setBounds(528, 393, 130, 36);
 		add(but_Prev);
 		
-		 but_Save = new JButton("Save");
+		but_Save = new JButton("Save");
 		but_Save.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		but_Save.setBounds(534, 442, 118, 36);
 		add(but_Save);

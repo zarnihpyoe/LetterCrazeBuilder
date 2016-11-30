@@ -5,8 +5,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
@@ -65,6 +63,16 @@ public class PuzzleBuilderPanel extends JPanel{
 		frame.getContentPane().setLayout(null);
 		*/
 	private void initializeView(){
+		
+		toggleButtonArray = new JToggleButton[36];
+		for (int i = 0; i < 36; i++){
+			toggleButtonArray[i] = new JToggleButton("");
+			int x_pos = 20 + 70 * (i % 6);
+			int y_pos = 62 + 70 * (i / 6);
+			toggleButtonArray[i].setBounds(x_pos, y_pos, 70, 70);
+			add(toggleButtonArray[i]);
+		}
+		
 		lblPuzzle = new JLabel("Puzzle");
 		lblPuzzle.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		lblPuzzle.setBounds(25, 13, 107, 36);
@@ -108,7 +116,7 @@ public class PuzzleBuilderPanel extends JPanel{
 		btnSave = new JButton("Save");
 		btnSave.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		btnSave.setBounds(539, 442, 118, 36);
-		btnSave.getContentPane().add(btnSave);
+		add(btnSave);
 		
 		star_1 = new JLabel("New label");
 		star_1.setIcon(new ImageIcon("C:\\Users\\Remy Kaldawy\\Pictures\\star (1).png"));
@@ -142,13 +150,5 @@ public class PuzzleBuilderPanel extends JPanel{
 	}
 	
 	private void initializeControllers(){
-	}
-		
-		
-		
-		JLabel label_5 = new JLabel("New label");
-		label_5.setIcon(new ImageIcon("C:\\Users\\Remy Kaldawy\\Pictures\\star (1).png"));
-		label_5.setBounds(559, 287, 16, 16);
-		frame.getContentPane().add(label_5);
 	}
 }

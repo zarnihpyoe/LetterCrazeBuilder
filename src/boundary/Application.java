@@ -3,7 +3,6 @@ package boundary;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 import model.Model;
 
 public class Application {
@@ -23,7 +22,9 @@ public class Application {
 		frame.setContentPane(panel);
 	}
 	
-	public void 
+	public boolean modifyFrameSize(int a, int b, int c, int d){
+		
+	}
 	
 
 }
