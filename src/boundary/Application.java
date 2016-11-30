@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import model.Model;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Application {
 	JFrame frame;
@@ -43,11 +45,28 @@ public class Application {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				Model m = new Model();
+				Timer timer = new Timer();
+				
 				try {
-					Application window = new Application(m);
+					final Application window = new Application(m);
+					BuilderSplashPanel splashView = new BuilderSplashPanel();
+					window.switchPanel(splashView);
+					window.modifyFrameSize(100, 100, 718, 445);
+					
+					
+					timer.schedule(new TimerTask() {
+						  @Override
+						  public void run() {
+							  window.frame.setVisible(true);
+						  }
+						}, 3000);
+					window.frame.setVisible(false);
+					
 					MainMenuPanel menuView = new MainMenuPanel(window, m);
 					window.switchPanel(menuView);
+					window.modifyFrameSize(100, 100, 600, 500);
 					window.frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

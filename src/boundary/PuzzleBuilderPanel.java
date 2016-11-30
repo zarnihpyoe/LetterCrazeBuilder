@@ -122,32 +122,38 @@ public class PuzzleBuilderPanel extends JPanel{
 		add(btnSave);
 		
 		star_1 = new JLabel("New label");
-		star_1.setIcon(new ImageIcon("C:\\Users\\Remy Kaldawy\\Pictures\\star (1).png"));
+		star_1.setIcon(new ImageIcon
+				(PuzzleBuilderPanel.class.getResource("/resources/STAR.png")));
 		star_1.setBounds(615, 229, 16, 16);
 		add(star_1);
 		
 		star_2 = new JLabel("New label");
-		star_2.setIcon(new ImageIcon("C:\\Users\\Remy Kaldawy\\Pictures\\star (1).png"));
+		star_2.setIcon(new ImageIcon
+				(PuzzleBuilderPanel.class.getResource("/resources/STAR.png")));
 		star_2.setBounds(615, 258, 16, 16);
 		add(star_2);
 		
 		star_3 = new JLabel("New label");
-		star_3.setIcon(new ImageIcon("C:\\Users\\Remy Kaldawy\\Pictures\\star (1).png"));
+		star_3.setIcon(new ImageIcon
+				(PuzzleBuilderPanel.class.getResource("/resources/STAR.png")));
 		star_3.setBounds(587, 258, 16, 16);
 		add(star_3);
 		
 		star_4 = new JLabel("New label");
-		star_4.setIcon(new ImageIcon("C:\\Users\\Remy Kaldawy\\Pictures\\star (1).png"));
+		star_4.setIcon(new ImageIcon
+				(PuzzleBuilderPanel.class.getResource("/resources/STAR.png")));
 		star_4.setBounds(615, 287, 16, 16);
 		add(star_4);
 		
 		star_5 = new JLabel("New label");
-		star_5.setIcon(new ImageIcon("C:\\Users\\Remy Kaldawy\\Pictures\\star (1).png"));
+		star_5.setIcon(new ImageIcon
+				(PuzzleBuilderPanel.class.getResource("/resources/STAR.png")));
 		star_5.setBounds(587, 287, 16, 16);
 		add(star_5);
 		
 		star_6 = new JLabel("New label");
-		star_6.setIcon(new ImageIcon("C:\\Users\\Remy Kaldawy\\Pictures\\star (1).png"));
+		star_6.setIcon(new ImageIcon
+				(PuzzleBuilderPanel.class.getResource("/resources/STAR.png")));
 		star_6.setBounds(559, 287, 16, 16);
 		add(star_6);	
 	}
