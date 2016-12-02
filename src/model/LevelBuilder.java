@@ -2,6 +2,7 @@ package model;
 
 public abstract class LevelBuilder {
 	
+	protected int lvl;
 	protected BoardBuilder bb;
 	protected ScoreBoardBuilder sbb;
 	
@@ -10,6 +11,11 @@ public abstract class LevelBuilder {
 		this.sbb = sbb;
 	}
 	
-	//public abstract Level build();
+	public abstract Level build();
 
+	public LevelBuilder setLvl(int lvl) {
+		this.lvl = lvl;
+		return this;
+	}
+	
 }
