@@ -321,19 +321,19 @@ public class ThemeBuilderPanel extends JPanel{
 	}
 	
 	public JTextField getTheme() {
-		return this.textField_1;
+		return this.textField_4;
 	}
 	
 	public JTextField getWord1() {
-		return this.textField_2;
+		return this.textField_1;
 	}
 	
 	public JTextField getWord2() {
-		return this.textField_3;
+		return this.textField_2;
 	}
 	
 	public JTextField getWord3() {
-		return this.textField_4;
+		return this.textField_3;
 	}
 	
 	public boolean getBoardShape(int butNum) {

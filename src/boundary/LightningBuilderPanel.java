@@ -187,19 +187,19 @@ public class LightningBuilderPanel extends JPanel{
 	}
 	
 	public JTextField getTimer() {
-		return this.textField;
+		return this.textField_4;
 	}
 	
 	public JTextField getForOneStar() {
-		return this.textField_2;
+		return this.textField_1;
 	}
 	
 	public JTextField getForTwoStar() {
-		return this.textField_3;
+		return this.textField_2;
 	}
 	
 	public JTextField getForThreeStar() {
-		return this.textField_4;
+		return this.textField_3;
 	}
 	
 	public boolean getBoardShape(int butNum) {
