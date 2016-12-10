@@ -180,6 +180,10 @@ public class PuzzleBuilderPanel extends JPanel{
 		return this.textField_3;
 	}
 	
-	//public boolean 
+	public boolean getBoardShape(int butNum) {
+		return !(toggleButtonArray[butNum].isEnabled());
+	}
+	
+	public 
 	
 }

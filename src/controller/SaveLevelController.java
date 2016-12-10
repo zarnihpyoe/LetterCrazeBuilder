@@ -49,6 +49,18 @@ public class SaveLevelController extends MouseAdapter{
 
 				// Writes the content to the file
 				writer.write(levelNumber); 
+				//B:ARRAY_OF_BUTTON_NUMBERS_THAT_FORM_SHAPE:B    /*B: :B -only needed to tell where array starts and ends*/
+				writer.write("B:");
+				
+				// The indexes of the buttons that should form the shape of the board
+				for (int i=0; i<36; i++) {
+					if ((boolean) ((PuzzleBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
+						writer.write(i);
+					}
+				}
+				
+				writer.write(":B");
+				
 				writer.write(forOneStar);
 				writer.write(forTwoStar);
 				writer.write(forThreeStar);
@@ -86,6 +98,18 @@ public class SaveLevelController extends MouseAdapter{
 
 				// Writes the content to the file
 				writer.write(levelNumber);
+				
+				//B:ARRAY_OF_BUTTON_NUMBERS_THAT_FORM_SHAPE:B    /*B: :B -only needed to tell where array starts and ends*/
+				writer.write("B:");
+				
+				// The indexes of the buttons that should form the shape of the board
+				for (int i=0; i<36; i++) {
+					if ((boolean) ((LightningBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
+						writer.write(i);
+					}
+				}
+				
+				writer.write(":B");
 				writer.write(timer);
 				writer.write(forOneStar);
 				writer.write(forTwoStar);
@@ -122,6 +146,19 @@ public class SaveLevelController extends MouseAdapter{
 
 				// Writes the content to the file
 				writer.write(levelNumber);
+				
+				//B:ARRAY_OF_BUTTON_NUMBERS_THAT_FORM_SHAPE:B    /*B: :B -only needed to tell where array starts and ends*/
+				writer.write("B:");
+				
+				// The indexes of the buttons that should form the shape of the board
+				for (int i=0; i<36; i++) {
+					if ((boolean) ((ThemeBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
+						writer.write(i);
+					}
+				}
+				
+				writer.write(":B");
+				
 				writer.write(themeName);
 				writer.write(word1);
 				writer.write(word2);
