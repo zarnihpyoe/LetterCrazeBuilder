@@ -18,6 +18,10 @@ public class Model {
 		this.currentBuilder = null;
 	}
 	
+	public LevelBuilder getBuilder(){
+		return this.currentBuilder;
+	}
+	
 	
 	
 }

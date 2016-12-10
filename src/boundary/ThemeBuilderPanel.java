@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import model.Model;
 import javax.swing.JToggleButton;
 
+import controller.SaveLevelController;
 import controller.ToMainMenuController;
 import model.*;
 
@@ -312,5 +313,26 @@ public class ThemeBuilderPanel extends JPanel{
 	
 	public void initializeControllers(){
 		btnMainMenu.addMouseListener(new ToMainMenuController(this.a, this.m));
+		but_Save.addMouseListener(new SaveLevelController(this.a, this.m));
+	}
+	
+	public JTextField getLevelNumber() {
+		return this.textField;
+	}
+	
+	public JTextField getTheme() {
+		return this.textField_1;
+	}
+	
+	public JTextField getWord1() {
+		return this.textField_2;
+	}
+	
+	public JTextField getWord2() {
+		return this.textField_3;
+	}
+	
+	public JTextField getWord3() {
+		return this.textField_4;
 	}
 }

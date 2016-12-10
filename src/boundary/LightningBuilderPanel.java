@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
+import controller.SaveLevelController;
 import controller.ToMainMenuController;
 import model.Model;
 
@@ -53,6 +54,10 @@ public class LightningBuilderPanel extends JPanel{
 		initialize();
 	}
 
+	JTextField getTextField() {
+		return this.textField;
+	}
+	
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -168,6 +173,7 @@ public class LightningBuilderPanel extends JPanel{
 	
 	private void initializeControllers(){
 		btnMainMenu.addMouseListener(new ToMainMenuController(this.a, this.m));
+		btnSave.addMouseListener(new SaveLevelController(this.a, this.m));
 	}
 	/*
 		frame = new JFrame();
@@ -175,4 +181,24 @@ public class LightningBuilderPanel extends JPanel{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		*/
+	
+	public JTextField getLevelNumber() {
+		return this.textField;
+	}
+	
+	public JTextField getTimer() {
+		return this.textField;
+	}
+	
+	public JTextField getForOneStar() {
+		return this.textField_2;
+	}
+	
+	public JTextField getForTwoStar() {
+		return this.textField_3;
+	}
+	
+	public JTextField getForThreeStar() {
+		return this.textField_4;
+	}
 }

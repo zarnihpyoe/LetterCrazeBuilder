@@ -10,6 +10,7 @@ import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
+import controller.SaveLevelController;
 import controller.ToMainMenuController;
 import model.Model;
 
@@ -160,5 +161,25 @@ public class PuzzleBuilderPanel extends JPanel{
 	
 	private void initializeControllers(){
 		btnMainMenu.addMouseListener(new ToMainMenuController(this.a, this.m));
+		btnSave.addMouseListener(new SaveLevelController(this.a, this.m));
 	}
+
+	public JTextField getLevelNumber() {
+		return this.textField;
+	}
+	
+	public JTextField getForOneStar() {
+		return this.textField_1;
+	}
+	
+	public JTextField getForTwoStar() {
+		return this.textField_2;
+	}
+	
+	public JTextField getForThreeStar() {
+		return this.textField_3;
+	}
+	
+	//public boolean 
+	
 }
