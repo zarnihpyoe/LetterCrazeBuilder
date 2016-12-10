@@ -184,6 +184,5 @@ public class PuzzleBuilderPanel extends JPanel{
 		return !(toggleButtonArray[butNum].isEnabled());
 	}
 	
-	public 
 	
 }

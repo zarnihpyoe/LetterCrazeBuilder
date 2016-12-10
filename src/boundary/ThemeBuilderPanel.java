@@ -335,4 +335,8 @@ public class ThemeBuilderPanel extends JPanel{
 	public JTextField getWord3() {
 		return this.textField_4;
 	}
+	
+	public boolean getBoardShape(int butNum) {
+		return !(toggleButtonArray[butNum].isEnabled());
+	}
 }

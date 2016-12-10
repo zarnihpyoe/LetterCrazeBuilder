@@ -201,4 +201,8 @@ public class LightningBuilderPanel extends JPanel{
 	public JTextField getForThreeStar() {
 		return this.textField_4;
 	}
+	
+	public boolean getBoardShape(int butNum) {
+		return !(toggleButtonArray[butNum].isEnabled());
+	}
 }
