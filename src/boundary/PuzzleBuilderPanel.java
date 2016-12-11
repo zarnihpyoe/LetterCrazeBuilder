@@ -182,8 +182,9 @@ public class PuzzleBuilderPanel extends JPanel{
 		return this.textField_3;
 	}
 	
+	// Checks what buttons were selected(i.e. what buttons should be disabled in new board)
 	public boolean getBoardShape(int butNum) {
-		return !(toggleButtonArray[butNum].isEnabled());
+		return toggleButtonArray[butNum].isSelected();
 	}
 	
 	

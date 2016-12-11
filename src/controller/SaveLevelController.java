@@ -51,14 +51,17 @@ public class SaveLevelController extends MouseAdapter{
 				writer.write(levelNumber); 
 				//B:ARRAY_OF_BUTTON_NUMBERS_THAT_FORM_SHAPE:B    /*B: :B -only needed to tell where array starts and ends*/
 				writer.write("B:");
-				
 				// The indexes of the buttons that should form the shape of the board
 				for (int i=0; i<36; i++) {
-					if ((boolean) ((PuzzleBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
-						writer.write(i);
+					System.out.println(((PuzzleBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i));;
+					// If tile is selected, it should be disabled when we construct the new board
+					if (((PuzzleBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
+						writer.write("f");
+					} else {
+						writer.write("t");
 					}
 				}
-				
+				 
 				writer.write(":B");
 				
 				writer.write(forOneStar);
@@ -104,8 +107,12 @@ public class SaveLevelController extends MouseAdapter{
 				
 				// The indexes of the buttons that should form the shape of the board
 				for (int i=0; i<36; i++) {
-					if ((boolean) ((LightningBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
-						writer.write(i);
+					boolean check  = (boolean) ((LightningBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i);
+					// If tile is selected, it should be disabled when we construct the new board
+					if (check) {
+						writer.write("f");
+					} else {
+						writer.write("t");
 					}
 				}
 				
@@ -152,8 +159,11 @@ public class SaveLevelController extends MouseAdapter{
 				
 				// The indexes of the buttons that should form the shape of the board
 				for (int i=0; i<36; i++) {
+					// If tile is selected, it should be disabled when we construct the new board
 					if ((boolean) ((ThemeBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
-						writer.write(i);
+						writer.write("f");
+					} else {
+						writer.write("t");
 					}
 				}
 				
