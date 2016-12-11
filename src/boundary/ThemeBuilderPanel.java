@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import model.Model;
 import javax.swing.JToggleButton;
 
+import controller.PreviewLevelController;
 import controller.SaveLevelController;
 import controller.ToMainMenuController;
 import model.*;
@@ -314,6 +315,7 @@ public class ThemeBuilderPanel extends JPanel{
 	public void initializeControllers(){
 		btnMainMenu.addMouseListener(new ToMainMenuController(this.a, this.m));
 		but_Save.addMouseListener(new SaveLevelController(this.a, this.m));
+		but_Prev.addMouseListener(new PreviewLevelController(this.a, this.m));
 	}
 	
 	public JTextField getLevelNumber() {

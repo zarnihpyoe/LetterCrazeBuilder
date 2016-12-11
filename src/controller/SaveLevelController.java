@@ -36,7 +36,7 @@ public class SaveLevelController extends MouseAdapter{
 
 			try {
 
-				File file = new File("c:\\PuzzleBuilder.txt");
+				File file = new File("c:\\PuzzleBuilder".concat(levelNumber).concat(".txt"));
 
 				if (file.createNewFile()){
 					System.out.println("File is created!");
@@ -85,7 +85,7 @@ public class SaveLevelController extends MouseAdapter{
 
 			try {
 
-				File file = new File("c:\\LightningBuilder.txt");
+				File file = new File("c:\\LightningBuilder".concat(levelNumber).concat(".txt"));
 
 				if (file.createNewFile()){
 					System.out.println("File is created!");
@@ -133,7 +133,7 @@ public class SaveLevelController extends MouseAdapter{
 
 			try {
 
-				File file = new File("c:\\ThemeBuilder.txt");
+				File file = new File("c:\\ThemeBuilder".concat(levelNumber).concat(".txt"));
 
 				if (file.createNewFile()){
 					System.out.println("File is created!");
