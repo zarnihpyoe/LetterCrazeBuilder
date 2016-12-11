@@ -17,6 +17,7 @@ public class BoardBuilder {
 			for(int j=0; j<6; j++) {
 				if(enabledTiles[i][j]) {
 					tiles[i][j] = new Tile(i, j);
+					tiles[i][j].setLetter(LetterBank.EMPTY);
 				}
 				else {
 					tiles[i][j] = null;
