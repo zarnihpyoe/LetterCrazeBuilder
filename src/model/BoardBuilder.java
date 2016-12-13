@@ -4,14 +4,7 @@ public class BoardBuilder {
 	
 	private boolean[][] enabledTiles = new boolean[6][6];
 	
-	public BoardBuilder(){
-		// enable every tiles by default
-		for(int i=0; i<6; i++) {
-			for(int j=0; j<6; j++) {
-				enabledTiles[i][j] = true;
-			}
-		}
-	}
+	public BoardBuilder(){}
 	
 	public BoardBuilder changeTileState(int row, int col) {
 		this.enabledTiles[row][col] = !this.enabledTiles[row][col];

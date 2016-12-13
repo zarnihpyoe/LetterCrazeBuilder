@@ -14,8 +14,7 @@ public class LevelParser {
 
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-			//mapper.enable(SerializationFeature.INDENT_OUTPUT);
+			mapper.enable(SerializationFeature.INDENT_OUTPUT);
 			File file = new File("level" + level.getLvl() +".json");
 			file.createNewFile();
 			mapper.writeValue(file, level);
