@@ -3,7 +3,5 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/LetterCraze"/>
-	<classpathentry kind="lib" path="C:/Users/Zarni Phyo/workspace/LetterCrazeBuilder/lib/jackson-core-2.8.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Zarni Phyo/workspace/LetterCrazeBuilder/lib/jackson-databind-2.8.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
