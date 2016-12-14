@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
+import javax.swing.text.JTextComponent;
 
 import controller.PreviewLevelController;
 import controller.SaveLevelController;
@@ -25,6 +26,7 @@ public class PuzzleBuilderPanel extends JPanel{
 	private Model m;
 
 	private JTextField textField;
+	private JTextField textFieldW;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
@@ -32,6 +34,7 @@ public class PuzzleBuilderPanel extends JPanel{
 	JLabel lblPuzzle;
 	JButton btnMainMenu;
 	JLabel lblLevel;
+	JLabel lblLimit;
 	JButton btnPrev;
 	JButton btnSave;
 	
@@ -97,6 +100,16 @@ public class PuzzleBuilderPanel extends JPanel{
 		textField.setBounds(570, 118, 100, 25);
 		add(textField);
 		textField.setColumns(10);
+		
+		lblLimit = new JLabel("Limit:");
+		lblLimit.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
+		lblLimit.setBounds(500, 175, 70, 28);
+		add(lblLimit);
+		
+		textFieldW = new JTextField();
+		textFieldW.setBounds(570, 180, 100, 25);
+		add(textFieldW);
+		textFieldW.setColumns(10);
 		
 		textField_1 = new JTextField();
 		textField_1.setBounds(657, 226, 46, 22);
@@ -185,6 +198,10 @@ public class PuzzleBuilderPanel extends JPanel{
 	// Checks what buttons were selected(i.e. what buttons should be disabled in new board)
 	public boolean getBoardShape(int butNum) {
 		return toggleButtonArray[butNum].isSelected();
+	}
+
+	public JTextField getLimit() {
+		return this.textFieldW;
 	}
 	
 	

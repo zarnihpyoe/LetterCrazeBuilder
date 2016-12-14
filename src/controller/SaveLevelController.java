@@ -30,6 +30,7 @@ public class SaveLevelController extends MouseAdapter{
 
 		if (model.getBuilder() instanceof PuzzleBuilder) {
 			String levelNumber = ((PuzzleBuilderPanel) this.app.getCurrentPanel()).getLevelNumber().getText();
+			String wordLimit = ((PuzzleBuilderPanel) this.app.getCurrentPanel()).getLimit().getText();
 			String forOneStar = ((PuzzleBuilderPanel) this.app.getCurrentPanel()).getForOneStar().getText();
 			String forTwoStar = ((PuzzleBuilderPanel) this.app.getCurrentPanel()).getForTwoStar().getText();
 			String forThreeStar = ((PuzzleBuilderPanel) this.app.getCurrentPanel()).getForThreeStar().getText();
@@ -64,6 +65,7 @@ public class SaveLevelController extends MouseAdapter{
 				 
 				writer.write(":B");
 				
+				writer.write(wordLimit);
 				writer.write(forOneStar);
 				writer.write(forTwoStar);
 				writer.write(forThreeStar);
@@ -85,7 +87,7 @@ public class SaveLevelController extends MouseAdapter{
 			String forOneStar = ((LightningBuilderPanel) this.app.getCurrentPanel()).getForOneStar().getText();
 			String forTwoStar = ((LightningBuilderPanel) this.app.getCurrentPanel()).getForTwoStar().getText();
 			String forThreeStar = ((LightningBuilderPanel) this.app.getCurrentPanel()).getForThreeStar().getText();
-
+			
 			try {
 
 				File file = new File("c:\\LightningBuilder".concat(levelNumber).concat(".txt"));
