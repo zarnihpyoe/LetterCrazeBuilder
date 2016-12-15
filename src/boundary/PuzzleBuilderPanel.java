@@ -204,5 +204,30 @@ public class PuzzleBuilderPanel extends JPanel{
 		return this.textFieldW;
 	}
 	
+	// Mark tile at position i as selected 
+	public void setSelectedTiles(int i) {
+		toggleButtonArray[i].setSelected(true);
+	}
+	
+	public void setLevelNumber(int lvl) {
+		this.textField.setText(lvl+"");
+		repaint();
+	}
+	
+	public void setLimit(int wordLimit) {
+		this.textFieldW.setText(wordLimit+"");
+	}
+	
+	public void setOneStar(int thresh1) {
+		this.textField_1.setText(thresh1+"");
+	}
+	
+	public void setTwoStar(int thresh2) {
+		this.textField_2.setText(thresh2+"");
+	}
+	
+	public void setThreeStar(int thresh3) {
+		this.textField_3.setText(thresh3+"");
+	}
 	
 }

@@ -13,6 +13,7 @@ import controller.ChooseLightningModeController;
 import controller.ChoosePuzzleModeController;
 import controller.ChooseThemeModeController;
 import controller.DeleteLevelButtonController;
+import controller.EditLevelButtonController;
 import model.Model;
 
 import java.awt.GridBagLayout;
@@ -30,6 +31,7 @@ public class MainMenuPanel extends JPanel{
 	private JButton btnLightning;
 	private JButton btnTheme;
 	private JButton btnDeleteLevel;
+	private JButton btnEditLevel;
 	private JLabel lblMainMenu;
 
 
@@ -74,6 +76,11 @@ public class MainMenuPanel extends JPanel{
 		btnTheme.setBounds(200, 273, 200, 50);
 		add(btnTheme);
 		
+		btnEditLevel = new JButton("Edit Level");
+		btnEditLevel.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
+		btnEditLevel.setBounds(371, 327, 200, 50);
+		add(btnEditLevel);
+		
 		btnDeleteLevel = new JButton("Delete Level");
 		btnDeleteLevel.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		btnDeleteLevel.setBounds(371, 391, 200, 50);
@@ -85,5 +92,6 @@ public class MainMenuPanel extends JPanel{
 		btnLightning.addMouseListener(new ChooseLightningModeController(this.a, this.m));
 		btnTheme.addMouseListener(new ChooseThemeModeController(this.a, this.m));
 		btnDeleteLevel.addMouseListener(new DeleteLevelButtonController(this.a, this.m));
+		btnEditLevel.addMouseListener(new EditLevelButtonController(this.a, this.m));
 	}
 }

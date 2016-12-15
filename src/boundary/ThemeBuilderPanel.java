@@ -341,4 +341,30 @@ public class ThemeBuilderPanel extends JPanel{
 	public boolean getBoardShape(int butNum) {
 		return toggleButtonArray[butNum].isSelected();
 	}
+
+	// Mark tile at position i as selected 
+	public void setSelectedTiles(int i) {
+		toggleButtonArray[i].setSelected(true);
+	}
+
+	public void setLevelNumber(int lvl) {
+		this.textField.setText(lvl+"");
+		repaint();
+	}
+
+	public void setTheme(String theme) {
+		this.textField_4.setText(theme+"");
+	}
+
+	public void setWord1(String word1) {
+		this.textField_1.setText(word1+"");
+	}
+
+	public void setWord2(String word2) {
+		this.textField_2.setText(word2+"");
+	}
+
+	public void setWord3(String word3) {
+		this.textField_3.setText(word3+"");
+	}
 }

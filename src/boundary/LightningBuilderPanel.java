@@ -207,4 +207,30 @@ public class LightningBuilderPanel extends JPanel{
 	public boolean getBoardShape(int butNum) {
 		return toggleButtonArray[butNum].isSelected();
 	}
+
+	// Mark tile at position i as selected 
+	public void setSelectedTiles(int i) {
+		toggleButtonArray[i].setSelected(true);
+	}
+
+	public void setLevelNumber(int lvl) {
+		this.textField.setText(lvl+"");
+		repaint();
+	}
+
+	public void setTimer(int time) {
+		this.textField_4.setText(time+"");
+	}
+
+	public void setOneStar(int thresh1) {
+		this.textField_1.setText(thresh1+"");
+	}
+
+	public void setTwoStar(int thresh2) {
+		this.textField_2.setText(thresh2+"");
+	}
+
+	public void setThreeStar(int thresh3) {
+		this.textField_3.setText(thresh3+"");
+	}
 }

@@ -30,11 +30,12 @@ public class DeleteLevelPanel extends JPanel {
 	Model model;
 	
 	private JButton[] buttonArray;
+	private JButton btnMainMenu;
 
 	/**
 	 * Create the application.
 	 */
-	public DeleteLevelPanel(Application app, Model model){
+	public DeleteLevelPanel(Application app, Model model) {
 		initialize(app, model);
 	}
 
@@ -57,6 +58,10 @@ public class DeleteLevelPanel extends JPanel {
 			buttonArray[i].setBounds(x_pos, y_pos, 70, 70);
 			add(buttonArray[i]);
 		}
+		btnMainMenu = new JButton("Main Menu");
+		btnMainMenu.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
+		btnMainMenu.setBounds(545, 100, 175, 52);
+		add(btnMainMenu);
 	}
 	
 	private void initializeControllers(){
@@ -74,7 +79,6 @@ public class DeleteLevelPanel extends JPanel {
 		buttonArray[11].addMouseListener(new DeleteLevelMenu(this.app, this.model, 12));
 		buttonArray[12].addMouseListener(new DeleteLevelMenu(this.app, this.model, 13));
 		buttonArray[13].addMouseListener(new DeleteLevelMenu(this.app, this.model, 14));
-		buttonArray[14].addMouseListener(new DeleteLevelMenu(this.app, this.model, 15));
-		
+		buttonArray[14].addMouseListener(new DeleteLevelMenu(this.app, this.model, 15));	
 	}
 }
