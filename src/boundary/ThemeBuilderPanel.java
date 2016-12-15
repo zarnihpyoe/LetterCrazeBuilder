@@ -17,14 +17,14 @@ import model.*;
 
 public class ThemeBuilderPanel extends JPanel{
 	
-	private Application a;
-	private Model m;
+	public Application a;
+	public Model m;
 
-	private JTextField textField;
-	private JTextField textField_4;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	public JTextField textField;
+	public JTextField textField_4;
+	public JTextField textField_1;
+	public JTextField textField_2;
+	public JTextField textField_3;
 	JLabel lblPuzzle;
 	JLabel lblLevel;
 	JButton btnMainMenu;
