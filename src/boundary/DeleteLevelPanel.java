@@ -1,14 +1,80 @@
 package boundary;
-
 import javax.swing.JPanel;
 
-import model.*;
+import javax.swing.border.EmptyBorder;
 
-public class DeleteLevelPanel extends JPanel{
+import controller.ChooseLightningModeController;
+import controller.ChoosePuzzleModeController;
+import controller.ChooseThemeModeController;
+import controller.DeleteLevelMenu;
+import controller.ToMainMenuController;
+import controllers.*;
+import model.Model;
+
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JScrollPane;
+import javax.swing.JToggleButton;
+
+import java.awt.GridBagLayout;
+import javax.swing.JButton;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import java.util.ArrayList;
+
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
+
+public class DeleteLevelPanel extends JPanel {
 	Application app;
 	Model model;
 	
-	
-	
+	private JButton[] buttonArray;
 
+	/**
+	 * Create the application.
+	 */
+	public DeleteLevelPanel(Application app, Model model){
+		initialize(app, model);
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize(Application app, Model model) {
+		this.app = app;
+		this.model = model;
+		initializeView();
+		initializeControllers();
+	}
+	
+	private void initializeView(){
+		buttonArray = new JButton[15];
+		for (int i = 0; i < 15; i++){
+			buttonArray[i] = new JButton(""+(i+1));
+			int x_pos = 50 + 70 * (i % 6);
+			int y_pos = 82 + 70 * (i / 6);
+			buttonArray[i].setBounds(x_pos, y_pos, 70, 70);
+			add(buttonArray[i]);
+		}
+	}
+	
+	private void initializeControllers(){
+		buttonArray[0].addMouseListener(new DeleteLevelMenu(this.app, this.model, 1));
+		buttonArray[1].addMouseListener(new DeleteLevelMenu(this.app, this.model, 2));
+		buttonArray[2].addMouseListener(new DeleteLevelMenu(this.app, this.model, 3));
+		buttonArray[3].addMouseListener(new DeleteLevelMenu(this.app, this.model, 4));
+		buttonArray[4].addMouseListener(new DeleteLevelMenu(this.app, this.model, 5));
+		buttonArray[5].addMouseListener(new DeleteLevelMenu(this.app, this.model, 6));
+		buttonArray[6].addMouseListener(new DeleteLevelMenu(this.app, this.model, 7));
+		buttonArray[7].addMouseListener(new DeleteLevelMenu(this.app, this.model, 8));
+		buttonArray[8].addMouseListener(new DeleteLevelMenu(this.app, this.model, 9));
+		buttonArray[9].addMouseListener(new DeleteLevelMenu(this.app, this.model, 10));
+		buttonArray[10].addMouseListener(new DeleteLevelMenu(this.app, this.model, 11));
+		buttonArray[11].addMouseListener(new DeleteLevelMenu(this.app, this.model, 12));
+		buttonArray[12].addMouseListener(new DeleteLevelMenu(this.app, this.model, 13));
+		buttonArray[13].addMouseListener(new DeleteLevelMenu(this.app, this.model, 14));
+		buttonArray[14].addMouseListener(new DeleteLevelMenu(this.app, this.model, 15));
+		
+	}
 }

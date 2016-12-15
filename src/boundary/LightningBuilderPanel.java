@@ -205,6 +205,6 @@ public class LightningBuilderPanel extends JPanel{
 	}
 	
 	public boolean getBoardShape(int butNum) {
-		return !(toggleButtonArray[butNum].isEnabled());
+		return toggleButtonArray[butNum].isSelected();
 	}
 }

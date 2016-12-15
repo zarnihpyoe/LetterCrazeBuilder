@@ -8,15 +8,15 @@ public class PuzzleBuilder extends LevelBuilder{
 		super(bb, sbb);
 	}
 	
-	@Override
-	public Level build() {
-		Puzzle level = new Puzzle(lvl, bb.build(), sbb.build(), wordLimit); 
-		return level;
-	}
-	
-	public PuzzleBuilder setWordLimit(int wordLimit) {
-		this.wordLimit = wordLimit;
-		return this;
-	}
+//	@Override
+//	public Level build() {
+//		Puzzle level = new Puzzle(lvl, bb, sbb, wordLimit); 
+//		return level;
+//	}
+//	
+//	public PuzzleBuilder setWordLimit(int wordLimit) {
+//		this.wordLimit = wordLimit;
+//		return this;
+//	}
 
 }

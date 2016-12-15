@@ -11,20 +11,20 @@ public class ThemeBuilder extends LevelBuilder{
 		super(bb, sbb);
 	}
 
-	@Override
-	public Level build() {
-		Theme level = new Theme(lvl, bb.build(), sbb.build(), theme, wordList);
-		return level;
-	}
-
-	public ThemeBuilder setTheme(String theme) {
-		this.theme = theme;
-		return this;
-	}
-
-	public ThemeBuilder setWordList(ArrayList<String> wordList) {
-		this.wordList = wordList;
-		return this;
-	}
+//	@Override
+//	public Level build() {
+//		Theme level = new Theme(lvl, bb.build(), sbb.build(), theme, wordList);
+//		return level;
+//	}
+//
+//	public ThemeBuilder setTheme(String theme) {
+//		this.theme = theme;
+//		return this;
+//	}
+//
+//	public ThemeBuilder setWordList(ArrayList<String> wordList) {
+//		this.wordList = wordList;
+//		return this;
+//	}
 
 }

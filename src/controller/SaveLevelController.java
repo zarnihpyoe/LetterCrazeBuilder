@@ -37,7 +37,7 @@ public class SaveLevelController extends MouseAdapter{
 
 			try {
 
-				File file = new File("c:\\PuzzleBuilder".concat(levelNumber).concat(".txt"));
+				File file = new File("".concat(levelNumber).concat(".txt"));
 
 				if (file.createNewFile()){
 					System.out.println("File is created!");
@@ -49,27 +49,30 @@ public class SaveLevelController extends MouseAdapter{
 				FileWriter writer = new FileWriter(file); 
 
 				// Writes the content to the file
-				writer.write(levelNumber); 
-				//B:ARRAY_OF_BUTTON_NUMBERS_THAT_FORM_SHAPE:B    /*B: :B -only needed to tell where array starts and ends*/
-				writer.write("B:");
+				writer.write(levelNumber+"\n"); 
 				// The indexes of the buttons that should form the shape of the board
 				for (int i=0; i<36; i++) {
 					System.out.println(((PuzzleBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i));;
 					// If tile is selected, it should be disabled when we construct the new board
 					if (((PuzzleBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
-						writer.write("f");
+						if ((i+1)%6 == 0) {
+							writer.write("0"+"\n");
+						} else {
+							writer.write("0");
+						}
 					} else {
-						writer.write("t");
+						if ((i+1)%6 == 0) {
+							writer.write("*"+"\n");
+						} else {
+							writer.write("*");
+						}
 					}
 				}
-				 
-				writer.write(":B");
 				
-				writer.write(wordLimit);
-				writer.write(forOneStar);
-				writer.write(forTwoStar);
-				writer.write(forThreeStar);
-				writer.write(" ");
+				writer.write(wordLimit+"\n");
+				writer.write(forOneStar+"\n");
+				writer.write(forTwoStar+"\n");
+				writer.write(forThreeStar+"\n");
 				writer.flush();
 				writer.close();
 
@@ -90,7 +93,7 @@ public class SaveLevelController extends MouseAdapter{
 			
 			try {
 
-				File file = new File("c:\\LightningBuilder".concat(levelNumber).concat(".txt"));
+				File file = new File("".concat(levelNumber).concat(".txt"));
 
 				if (file.createNewFile()){
 					System.out.println("File is created!");
@@ -102,28 +105,31 @@ public class SaveLevelController extends MouseAdapter{
 				FileWriter writer = new FileWriter(file); 
 
 				// Writes the content to the file
-				writer.write(levelNumber);
-				
-				//B:ARRAY_OF_BUTTON_NUMBERS_THAT_FORM_SHAPE:B    /*B: :B -only needed to tell where array starts and ends*/
-				writer.write("B:");
+				writer.write(levelNumber+"\n");
 				
 				// The indexes of the buttons that should form the shape of the board
 				for (int i=0; i<36; i++) {
-					boolean check  = (boolean) ((LightningBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i);
+					System.out.println(((LightningBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i));;
 					// If tile is selected, it should be disabled when we construct the new board
-					if (check) {
-						writer.write("f");
+					if (((LightningBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
+						if ((i+1)%6 == 0) {
+							writer.write("0"+"\n");
+						} else {
+							writer.write("0");
+						}
 					} else {
-						writer.write("t");
+						if ((i+1)%6 == 0) {
+							writer.write("*"+"\n");
+						} else {
+							writer.write("*");
+						}
 					}
 				}
-				
-				writer.write(":B");
-				writer.write(timer);
-				writer.write(forOneStar);
-				writer.write(forTwoStar);
-				writer.write(forThreeStar);
-				writer.write(" ");
+
+				writer.write(timer+"\n");
+				writer.write(forOneStar+"\n");
+				writer.write(forTwoStar+"\n");
+				writer.write(forThreeStar+"\n");
 				writer.flush();
 				writer.close();
 
@@ -154,28 +160,31 @@ public class SaveLevelController extends MouseAdapter{
 				FileWriter writer = new FileWriter(file); 
 
 				// Writes the content to the file
-				writer.write(levelNumber);
-				
-				//B:ARRAY_OF_BUTTON_NUMBERS_THAT_FORM_SHAPE:B    /*B: :B -only needed to tell where array starts and ends*/
-				writer.write("B:");
+				writer.write(levelNumber+"\n");
 				
 				// The indexes of the buttons that should form the shape of the board
 				for (int i=0; i<36; i++) {
+					System.out.println(((ThemeBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i));;
 					// If tile is selected, it should be disabled when we construct the new board
-					if ((boolean) ((ThemeBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
-						writer.write("f");
+					if (((ThemeBuilderPanel) this.app.getCurrentPanel()).getBoardShape(i)) {
+						if ((i+1)%6 == 0) {
+							writer.write("0"+"\n");
+						} else {
+							writer.write("0");
+						}
 					} else {
-						writer.write("t");
+						if ((i+1)%6 == 0) {
+							writer.write("*"+"\n");
+						} else {
+							writer.write("*");
+						}
 					}
 				}
 				
-				writer.write(":B");
-				
-				writer.write(themeName);
-				writer.write(word1);
-				writer.write(word2);
-				writer.write(word3);
-				writer.write(" ");
+				writer.write(themeName+"\n");
+				writer.write(word1+"\n");
+				writer.write(word2+"\n");
+				writer.write(word3+"\n");
 				writer.flush();
 				writer.close();
 

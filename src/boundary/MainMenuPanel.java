@@ -12,6 +12,7 @@ import javax.swing.SwingConstants;
 import controller.ChooseLightningModeController;
 import controller.ChoosePuzzleModeController;
 import controller.ChooseThemeModeController;
+import controller.DeleteLevelButtonController;
 import model.Model;
 
 import java.awt.GridBagLayout;
@@ -83,5 +84,6 @@ public class MainMenuPanel extends JPanel{
 		btnPuzzle.addMouseListener(new ChoosePuzzleModeController(this.a, this.m));
 		btnLightning.addMouseListener(new ChooseLightningModeController(this.a, this.m));
 		btnTheme.addMouseListener(new ChooseThemeModeController(this.a, this.m));
+		btnDeleteLevel.addMouseListener(new DeleteLevelButtonController(this.a, this.m));
 	}
 }

@@ -12,12 +12,12 @@ public abstract class LevelBuilder {
 	}
 	
 
-	public abstract Level build();
-
-	public LevelBuilder setLvl(int lvl) {
-		this.lvl = lvl;
-		return this;
-	}
+//	public abstract Level build();
+//
+//	public LevelBuilder setLvl(int lvl) {
+//		this.lvl = lvl;
+//		return this;
+//	}
 
 	
 }

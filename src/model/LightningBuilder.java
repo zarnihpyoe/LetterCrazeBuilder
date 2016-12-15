@@ -8,18 +8,17 @@ public class LightningBuilder extends LevelBuilder {
 		super(bb, sbb);
 	}
 	
-	@Override
-	public Lightning build() {
-		Lightning level = new Lightning(lvl, bb.build(), sbb.build(), time);
-		return level;
-	}
+//	public Lightning build() {
+//		Lightning level = new Lightning(lvl, bb.build(), sbb.build(), time);
+//		return level;
+//	}
 	
-	public LightningBuilder setTime(int time) {
-		this.time = time;
-		return this;
-	}
+//	public LightningBuilder setTime(int time) {
+//		this.time = time;
+//		return this;
+//	}
 	
-	public int getTime() { return time;	}
+	//public int getTime() { return time;	}
 
 
 }
