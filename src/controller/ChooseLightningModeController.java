@@ -20,9 +20,6 @@ public class ChooseLightningModeController extends MouseAdapter {
 	
 	@Override
 	public void mousePressed(MouseEvent me) {
-		// Initiate new main menu panel 
-		MainMenuPanel mainMenu = new MainMenuPanel(this.app, this.model);
-		
 		// Initiate new score board builder and board builder
 		ScoreBoardBuilder scoreBoard = new ScoreBoardBuilder();
 		BoardBuilder board = new BoardBuilder();
