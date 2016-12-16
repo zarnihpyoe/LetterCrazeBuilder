@@ -12,7 +12,7 @@ public class ScoreBoardBuilder {
 	
 	public ScoreBoardBuilder() {}
 	
-	public void setScoreFor(int star, int score) {
+	/*public void setScoreFor(int star, int score) {
 		switch (star) {
 			case FIRST_STAR: 
 				scoreForFirstStar = score;
@@ -24,7 +24,7 @@ public class ScoreBoardBuilder {
 				scoreForThirdStar = score;
 				break;
 		}
-	}
+	}*/
 	
 //	
 //	public ScoreBoard build() {

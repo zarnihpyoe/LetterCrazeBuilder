@@ -15,7 +15,7 @@ public class Application {
 	Model m;
 	
 	
-	Application(Model m){
+	public Application(Model m){
 		frame = new JFrame();
 		frame.setBounds(100, 100, 600, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

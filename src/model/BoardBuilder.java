@@ -6,7 +6,7 @@ public class BoardBuilder {
 	
 	public BoardBuilder(){}
 	
-	public BoardBuilder changeTileState(int row, int col) {
+	/*	public BoardBuilder changeTileState(int row, int col) {
 		this.enabledTiles[row][col] = !this.enabledTiles[row][col];
 		return this;
 	}
@@ -27,7 +27,7 @@ public class BoardBuilder {
 		return new Board(tiles);
 	}
 	
-/*	private Tile[][] linkTiles(Tile[][] tiles) {
+	private Tile[][] linkTiles(Tile[][] tiles) {
 		for(int j=0; j<6; j++) {
 			Tile pre = tiles[0][j];
 			for(int i=1; i<6; i++) {

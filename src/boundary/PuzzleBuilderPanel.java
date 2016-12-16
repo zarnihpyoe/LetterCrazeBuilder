@@ -25,12 +25,13 @@ public class PuzzleBuilderPanel extends JPanel{
 	private Application a;
 	private Model m;
 
-	private JTextField textField;
-	private JTextField textFieldW;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JToggleButton[] toggleButtonArray;
+	public JTextField textField;
+	public JTextField textFieldW;
+	public JTextField textField_1;
+	public JTextField textField_2;
+	public JTextField textField_3;
+	public JToggleButton[] toggleButtonArray;
+	
 	JLabel lblPuzzle;
 	JButton btnMainMenu;
 	JLabel lblLevel;

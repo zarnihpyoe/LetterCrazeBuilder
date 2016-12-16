@@ -79,6 +79,7 @@ public class DeleteLevelPanel extends JPanel {
 		buttonArray[11].addMouseListener(new DeleteLevelMenu(this.app, this.model, 12));
 		buttonArray[12].addMouseListener(new DeleteLevelMenu(this.app, this.model, 13));
 		buttonArray[13].addMouseListener(new DeleteLevelMenu(this.app, this.model, 14));
-		buttonArray[14].addMouseListener(new DeleteLevelMenu(this.app, this.model, 15));	
+		buttonArray[14].addMouseListener(new DeleteLevelMenu(this.app, this.model, 15));
+		btnMainMenu.addMouseListener(new ToMainMenuController(app, model));
 	}
 }

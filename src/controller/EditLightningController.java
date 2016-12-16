@@ -46,8 +46,6 @@ public class EditLightningController extends MouseAdapter {
 			System.out.println("This file doesn't exist you fool.");
 		}
 
-		String[][] levelBoard = new String[6][6];
-
 		next();
 
 		// The counter to keep track of number of the button that should be selected 

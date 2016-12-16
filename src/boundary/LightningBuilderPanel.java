@@ -25,12 +25,12 @@ public class LightningBuilderPanel extends JPanel{
 	Application a;
 	Model m;
 
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JToggleButton[] toggleButtonArray;
+	public JTextField textField;
+	public JTextField textField_1;
+	public JTextField textField_2;
+	public JTextField textField_3;
+	public JTextField textField_4;
+	public JToggleButton[] toggleButtonArray;
 	
 	private JLabel lblLightning;
 	private JLabel lblLevel;
@@ -177,12 +177,6 @@ public class LightningBuilderPanel extends JPanel{
 		btnSave.addMouseListener(new SaveLevelController(this.a, this.m));
 		btnPreview.addMouseListener(new PreviewLevelController(this.a, this.m));
 	}
-	/*
-		frame = new JFrame();
-		frame.setBounds(100, 100, 750, 575);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		*/
 	
 	public JTextField getLevelNumber() {
 		return this.textField;
