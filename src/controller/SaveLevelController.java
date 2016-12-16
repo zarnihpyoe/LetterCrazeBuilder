@@ -146,7 +146,7 @@ public class SaveLevelController extends MouseAdapter{
 
 			try {
 
-				File file = new File("c:\\ThemeBuilder".concat(levelNumber).concat(".txt"));
+				File file = new File("".concat(levelNumber).concat(".txt"));
 
 				if (file.createNewFile()){
 					System.out.println("File is created!");
