@@ -177,12 +177,6 @@ public class LightningBuilderPanel extends JPanel{
 		btnSave.addMouseListener(new SaveLevelController(this.a, this.m));
 		btnPreview.addMouseListener(new PreviewLevelController(this.a, this.m));
 	}
-	/*
-		frame = new JFrame();
-		frame.setBounds(100, 100, 750, 575);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		*/
 	
 	public JTextField getLevelNumber() {
 		return this.textField;

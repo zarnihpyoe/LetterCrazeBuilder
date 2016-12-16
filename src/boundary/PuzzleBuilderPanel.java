@@ -208,6 +208,7 @@ public class PuzzleBuilderPanel extends JPanel{
 	// Mark tile at position i as selected 
 	public void setSelectedTiles(int i) {
 		toggleButtonArray[i].setSelected(true);
+		repaint();
 	}
 	
 	public void setLevelNumber(int lvl) {

@@ -27,10 +27,16 @@ public class EditPuzzleController extends MouseAdapter {
 		this.model = m;
 		this.lvl = lvl;
 	}
-	
+
 	@Override
 	public void mousePressed(MouseEvent me) {
-		
+		// Initiate new score board builder and board builder
+		ScoreBoardBuilder scoreBoard = new ScoreBoardBuilder();
+		BoardBuilder board = new BoardBuilder();
+
+		// Initiate new Lightning builder and lightning view
+		PuzzleBuilder puzzleBuilder = new PuzzleBuilder(board, scoreBoard);
+		PuzzleBuilderPanel puzzleView = new PuzzleBuilderPanel(this.app, this.model);
 
 		try {
 			StringFileIterator(new File (lvl+".txt"));
@@ -38,35 +44,52 @@ public class EditPuzzleController extends MouseAdapter {
 			System.out.println("This file doesn't exist you fool.");
 		}
 		
-		String[][] levelBoard = new String[6][6];
-		
 		next();
 		
+		// The counter to keep track of number of the button that should be selected 
+		int j=0;
+		
 		String row1 = next(); //000000
-		for(int i=0; i<6; i++){levelBoard[0][i] = Character.toString(row1.charAt(i));}
+		for(int i=0; i<6; i++, j++) { 
+			if (row1.charAt(i) == '0') {
+				puzzleView.setSelectedTiles(j);
+			}
+		}
 		String row2 = next(); //******
-		for(int i=0; i<6; i++){levelBoard[1][i] = Character.toString(row2.charAt(i));}
+		for(int i=0; i<6; i++, j++){
+			if (row2.charAt(i) == '0') {
+				puzzleView.setSelectedTiles(j);
+			}
+		}
 		String row3 = next();
-		for(int i=0; i<6; i++){levelBoard[2][i] = Character.toString(row3.charAt(i));}
+		for(int i=0; i<6; i++, j++){
+			if (row3.charAt(i) == '0') {
+				puzzleView.setSelectedTiles(j);
+			}
+		}
 		String row4 = next();
-		for(int i=0; i<6; i++){levelBoard[3][i] = Character.toString(row4.charAt(i));}
+		for(int i=0; i<6; i++, j++){
+			if (row4.charAt(i) == '0') {
+				puzzleView.setSelectedTiles(j);
+			}
+		}
 		String row5 = next();	
-		for(int i=0; i<6; i++){levelBoard[4][i] = Character.toString(row5.charAt(i));}
+		for(int i=0; i<6; i++, j++){
+			if (row5.charAt(i) == '0') {
+				puzzleView.setSelectedTiles(j);
+			}
+		}
 		String row6 = next();
-		for(int i=0; i<6; i++){levelBoard[5][i] = Character.toString(row6.charAt(i));}
+		for(int i=0; i<6; i++, j++){
+			if (row6.charAt(i) == '0') {
+				puzzleView.setSelectedTiles(j);
+			}
+		}
 		
 		int wordLimit = Integer.parseInt(next());
 		int thresh1 = Integer.parseInt(next());
 		int thresh2 = Integer.parseInt(next());
 		int thresh3 = Integer.parseInt(next());
-		
-		// Initiate new score board builder and board builder
-		ScoreBoardBuilder scoreBoard = new ScoreBoardBuilder();
-		BoardBuilder board = new BoardBuilder();
-		
-		// Initiate new Lightning builder and lightning view
-		PuzzleBuilder puzzleBuilder = new PuzzleBuilder(board, scoreBoard);
-		PuzzleBuilderPanel puzzleView = new PuzzleBuilderPanel(this.app, this.model);
 		
 		// Assign lightning builder status to model
 		this.model.assignBuilder(puzzleBuilder);
