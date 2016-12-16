@@ -94,7 +94,9 @@ public class TestSaveLevelController extends TestCase {
 		app.switchPanel(panel);
 		slc = new SaveLevelController(app, m);
 
-		slc.mousePressed(null);
+		MouseEvent me = new MouseEvent(panel, 0, 0, 0, 0, 0, 0, true);
+		slc.mousePressed(me);
+		
 	}
 	
 }
