@@ -1,24 +1,23 @@
 package model;
-
+ 
+/**
+* <h1>LightningBuilder class</h1>
+* <p> The class for Lightning builder mode
+* <b>Note:</b> The time is in seconds
+*
+* @author  Palladium
+* @since   2016-12-15
+*/
 public class LightningBuilder extends LevelBuilder {
-
-	private int time; // in seconds
-	
-	public LightningBuilder(BoardBuilder bb, ScoreBoardBuilder sbb) {
-		super(bb, sbb);
-	}
-	
-//	public Lightning build() {
-//		Lightning level = new Lightning(lvl, bb.build(), sbb.build(), time);
-//		return level;
-//	}
-	
-//	public LightningBuilder setTime(int time) {
-//		this.time = time;
-//		return this;
-//	}
-	
-	//public int getTime() { return time;	}
-
-
+ 
+    private int time; 
+    /** 
+     * LightningBuilder constructor
+     * @param bb BoardBuilder
+     * @param sbb ScoreBoardBuilder
+     */
+    public LightningBuilder(BoardBuilder bb, ScoreBoardBuilder sbb) {
+        super(bb, sbb);
+    }
+ 
 }
